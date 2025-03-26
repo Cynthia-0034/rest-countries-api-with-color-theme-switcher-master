@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Where in the world?</h1>
+      <button id="theme-toggle">
+        <span id="theme-icon">🌙</span> Dark Mode
+      </button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Homepage -->
+      <section id="home" class="active">
+        <div class="search-filter">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="search"
+              placeholder="Search for a country..."
+            />
+          </div>
+          <select id="region-filter">
+            <option value="">Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+        <div id="countries-grid" class="countries-grid"></div>
+      </section>
+
+      <!-- Detail Page -->
+      <section id="detail" class="hidden">
+        <button id="back-btn">← Back</button>
+        <div id="country-detail" class="country-detail"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
